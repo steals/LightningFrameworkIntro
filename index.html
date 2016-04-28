@@ -61,12 +61,12 @@
 	<section class="slide">
 		<h2>So many Lightnings...</h2>
 		<ul>
-			<li>Lightning Framework</li>
-			<li>Lightning Design System</li>
-			<li>Lightning Experience</li>
-			<li>Sales Cloud Lightning</li>
-			<li>App Cloud Lightning</li>
-			<li>Lightning ...</li>
+			<li class="next">Lightning Framework</li>
+			<li class="next">Lightning Design System</li>
+			<li class="next">Lightning Experience</li>
+			<li class="next">Sales Cloud Lightning</li>
+			<li class="next">App Cloud Lightning</li>
+			<li class="next">Lightning ...</li>
 		</ul>
 	</section>
 	<section class="slide">
@@ -76,27 +76,27 @@
 	<section class="slide">
 		<h2>Lightning Components vs Visualforce</h2>
 		<ul>
-			<li>Lightning Framework is Component-based framework</li>
-			<li>Lightning Framework is Event driven framework</li>
-			<li>Lightning Framework is Async framework</li>
-			<li>Lightning Framework leverages a stateful client (using JavaScript) and a stateless server (using Apex)</li>
+			<li class="next">Lightning Framework is Component-based framework</li>
+			<li class="next">Lightning Framework is Event driven framework</li>
+			<li class="next">Lightning Framework is Async framework</li>
+			<li class="next">Lightning Framework leverages a stateful client (using JavaScript) and a stateless server (using Apex)</li>
 		</ul>
 	</section>
 	<section class="slide">
 		<h2>Lightning Components vs Visualforce</h2>
 		<ul class="double">
-			<li>Enables highly interactive and immersive user experiences</li>
-			<li>Javascript based i.e. we can use all power of Web APis</li>
-			<li>Easy to reuse components</li>
-			<li>One approach for mobile and desktop</li>
-			<li>No Annoying Visualforce Limits ( ViewState, Collection Size )</li>
-			<li>Can be included into Visualforce :)</li>
+			<li class="next">Enables highly interactive and immersive user experiences</li>
+			<li class="next">Javascript based i.e. we can use all power of Web APis</li>
+			<li class="next">Easy to reuse components</li>
+			<li class="next">One approach for mobile and desktop</li>
+			<li class="next">No Annoying Visualforce Limits ( ViewState, Collection Size )</li>
+			<li class="next">Can be included into Visualforce :)</li>
 			<!-- Visualforce -->
-			<li>Tried and true model</li>
-			<li>Has built-in metadata integration</li>
-			<li>Has built-in OLS / FLS security checks</li>
-			<li>Works good as a container for Angular/React/... apps</li>
-			<li>Can be used for Email Templates</li>
+			<li class="next">Tried and true model</li>
+			<li class="next">Has built-in metadata integration</li>
+			<li class="next">Has built-in OLS / FLS security checks</li>
+			<li class="next">Works good as a container for Angular/React/... apps</li>
+			<li class="next">Can be used for Email Templates</li>
 			<li class="hidden"></li>
 			<li class="hidden"></li>
 		</ul>
@@ -104,70 +104,200 @@
 	<section class="slide">
 		<h2>Lightning Components vs Visualforce</h2>
 		<ul class="double">
-			<li>Actively developing</li>
-			<li>Has annoying bugs</li>
-			<li>Difficult to debug</li>
-			<li>Does not have OLS / FLS security checks</li>
-			<li>Slow rendering on huge pages</li>
+			<li class="next">Actively developing</li>
+			<li class="next">Has annoying bugs</li>
+			<li class="next">Difficult to debug</li>
+			<li class="next">Does not have OLS / FLS security checks</li>
+			<li class="next">Slow rendering on huge pages</li>
 			<li class="hidden"></li>
 			<!-- Visualforce -->
-			<li>Designed ~15 years ago</li>
-			<li>Designed for desktop</li>
-			<li>Serverside generation of HTML markup</li>
-			<li>Mostly serverside logic</li>
-			<li>Higher latency</li>
-			<li>Has Limits</li>
+			<li class="next">Designed ~15 years ago</li>
+			<li class="next">Designed for desktop</li>
+			<li class="next">Serverside generation of HTML markup</li>
+			<li class="next">Mostly serverside logic</li>
+			<li class="next">Higher latency</li>
+			<li class="next">Has Limits</li>
 		</ul>
 	</section>
 	<section class="slide">
-		<h2>How to build Lightning Components</h2>
+		<h2>What to know for Lightning Components</h2>
 		<p class="shout grow">HTML, CSS, Javascript</p>
-
 	</section>
 	<section class="slide">
-		<h2>Aura Attributes</h2>
+		<h2>How to develop Lightning Components</h2>
+		<ul>
+			<li class="next"><strike>Developer Console</strike></li>
+			<li class="next">Setup development environment!</li>
+			<li class="next"><a target="_blank" href="https://github.com/joeferraro/MavensMate-SublimeText#version-7-betas">MavensMate + SublimeText / Atom</a></li>
+			<li class="next">Setup JS/CSS Linters</li>
+			<li class="next">Use git (at least locally)</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>How to develop Lightning Components</h2>
+		<img class="picture" src="pictures/atom.png"/>
+	</section>
+	<section class="slide">
+		<h2>Lightning Component Bundle</h2>
+		<ul>
+			<li class="next">Component (markup)</li>
+			<li class="next">Javascript Controller</li>
+			<li class="next">Javascript Helper</li>
+			<li class="next">Styles</li>
+			<li class="next">Renderer</li>
+			<li class="next">Design</li>
+			<li class="next">Documentation</li>
+			<li class="next">SVG</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Why we need Controller and Helper?</h2>
+		<ul>
+			<li class="next">Javascript Helper is shared accross all instances of the component</li>
+			<li class="next">Javascript Helper inherits functions from parent helper</li>
+			<li class="next">It's not possile to call other functions in the same controller</li>
+		</ul>
+		<p class="note next">
+			<a target="_blank" href="https://developer.salesforce.com/blogs/developer-relations/2015/06/understanding-javascript-controllers-versus-helpers-lightning-components.html">Understanding javascript controllers versus helpers in lightning components</a>
+		</p>
+	</section>
+	<section class="slide">
+		<h2>Lightning Component Bundle - markup</h2>
 		<pre>
 			<code>&lt;aura:component controller="SObjectService"&gt;
-    &lt;aura:attribute name="id" type="String" /&gt;
-    &lt;aura:attribute name="objectName" type="String" /&gt;
+  &lt;aura:attribute name="acc" type="Account" default="{<mark>sobjectType</mark>:'Account'}"/&gt;
+  &lt;aura:attribute name="objectName" type="String" default="Account"/&gt;
+&nbsp;<span class="next">
+  &lt;aura:handler name="init" value="{!this}" action="{!<mark>c</mark>.init}" /&gt;
+  &lt;aura:handler name="change" value="{!<mark>v</mark>.field}" action="{!<mark>c</mark>.init}" /&gt;
+&nbsp;</span><span class="next">
+  &lt;ltng:require styles="/resource/SLDS100/assets/styles/<br/>salesforce-lightning-design-system.min.css" /&gt;</span>
 &nbsp;
-    &lt;aura:handler name="init" value="{!this}" action="{!c.init}" /&gt;
-    &lt;aura:handler name="change" value="{!v.field}" action="{!c.init}" /&gt;
-&nbsp;
-    &lt;ltng:require styles="/resource/SLDS100/assets/styles/<br/>salesforce-lightning-design-system.min.css" /&gt;
-&nbsp;
+&lt;/aura:component&gt;
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Lightning Component Bundle - markup</h2>
+		<pre>
+			<code id="markup1">&lt;aura:component controller="SObjectService"&gt;
+	&lt;!-- Attributes --&gt;
+	&lt;div class="slds-col slds-form-element"&gt;<span class="next">
+	    &lt;<mark>aura:if</mark> isTrue="{!v.label != null &amp;&amp; v.label != ''}"&gt;
+	        &lt;label class="slds-form-element__label" for="{!v.id}"&gt;{!v.label}&lt;/label&gt;
+	    &lt;/aura:if&gt;</span><span class="next">
+	    &lt;div class="slds-form-element__control"&gt;
+	        &lt;div class="slds-select_container"&gt;
+	            &lt;select id="{!v.id}" class="slds-select" onchange="{!c.updateValue}"&gt;
+	                &lt;<mark>aura:iteration</mark> items="{!v.options}" var="option"&gt;
+	                    &lt;option value="{!option.value}" <br/>selected="{!v.value == option.value}"&gt;{!option.label}&lt;/option&gt;
+	                &lt;/aura:iteration&gt;
+	            &lt;/select&gt;
+	        &lt;/div&gt;
+	    &lt;/div&gt;</span>
+	&lt;/div&gt;
 &lt;/aura:component&gt;</code>
 		</pre>
+
+		<style>
+			#markup1 {
+				font-size: 18px;
+				line-height: 1.3;
+			}
+		</style>
+	</section>
+	<section class="slide">
+		<h2>Expressions</h2>
+		<span class="next"><p>Simple:</p>
+		<pre ><code>&lt;button class="slds-button" value="<mark>{!v.name}</mark>" onclick="<mark>{!c.click}</mark>" /&gt;</code></pre></span>
+		<span class="next"><p>Complex:</p>
+		<pre><code>&lt;label class="<mark>{!v.label != null &amp;amp;&amp;amp; v.label != '' ? '' : 'slds-hide'}</mark>" /&gt;</code></pre></span>
+	</section>
+	<section class="slide">
+		<h2>Conditional rendering</h2>
+
+		<pre>
+			<code>
+	&lt;aura:if isTrue="{!v.label != null &amp;&amp; v.label != ''}"&gt;
+        <span class="comment">&lt;-- Render if expression is true --&gt;</span><span class="next">
+		&lt;aura:set attribute="else"&gt;
+			<span class="comment">&lt;-- Render if expression is false --&gt;</span>
+		&lt;/aura:set&gt;</span>
+    &lt;/aura:if&gt;</span>
+
+			</code>
+		</pre>
 	</section>
 
 	<section class="slide">
-		<h2>Aura Attributes</h2>
-		<pre>
-			<code>&lt;aura:component controller="SObjectService"&gt;
-			    &lt;!-- Attributes --&gt;
-			    &lt;div class="slds-col slds-form-element"&gt;
-			        &lt;aura:if isTrue="{!v.label != null &amp;&amp; v.label != ''}"&gt;
-			            &lt;label class="slds-form-element__label" for="{!v.id}"&gt;{!v.label}&lt;/label&gt;
-			        &lt;/aura:if&gt;
-			        &lt;div class="slds-form-element__control"&gt;
-			            &lt;div class="slds-select_container"&gt;
-			                &lt;select id="{!v.id}" class="slds-select" onchange="{!c.updateValue}"&gt;
-			                    &lt;aura:iteration items="{!v.options}" var="option"&gt;
-			                        &lt;option value="{!option.value}" selected="{!v.value == option.value}"&gt;{!option.label}&lt;/option&gt;
-			                    &lt;/aura:iteration&gt;
-			                &lt;/select&gt;
-			            &lt;/div&gt;
-			        &lt;/div&gt;
-			    &lt;/div&gt;
-			&lt;/aura:component&gt;</code>
-		</pre>
-
-
+		<h2>Conditional rendering best practices</h2>
+		<ul>
+			<li class="next">Use aura:if instead of aura:renderIf when possible</li>
+			<li class="next">Try to avoid using aura:if / aura:renderIf inside aura:iteration</li>
+			<li class="next">Use CSS to quickly show/hide elements</li>
+			<li class="next">If you have nested aura:if blocks - wrap nested aura:if in &lt;span&gt; or &lt;div&gt;</li>
+		</ul>
 	</section>
 
+	<section class="slide">
+		<h2>Conditional rendering</h2>
+		<pre>
+			<code>
+	&lt;aura:if isTrue="{!v.label != null &amp;&amp; v.label != ''}"&gt;
+        <span class="comment">&lt;-- Render if expression is true --&gt;</span>
+		&lt;aura:set attribute="else"&gt;
+			<span class="comment">&lt;-- Render if expression is false --&gt;</span>
+			<mark>&lt;span&gt;</mark>
+				&lt;aura:if isTrue="{!v.secondLevel}"&gt;
+				&lt;/aura:if&gt;</span>
+			<mark>&lt;/span&gt;</mark>
+		&lt;/aura:set&gt;</span>
+    &lt;/aura:if&gt;</span>
+
+			</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Conditional rendering</h2>
+		<img class="" src="pictures/conditionalRender.png"/>
+		<p class="note">
+			<a target="blank" href="http://salesforce.stackexchange.com/questions/71604/lightning-bug-in-lightning-framework-when-using-aurarenderif?rq=1">Lightning: Bug in Lightning framework when using aura:renderIf?</a>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Rendering collections</h2>
+		<pre>
+			<code>
+	&lt;aura:iteration items="{!v.options}" var="option"&gt;
+        &lt;option value="{!option.value}" <br/>selected="{!v.value == option.value}"&gt;{!option.label}&lt;/option&gt;
+    &lt;/aura:iteration&gt;</span>
+
+			</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Questions</h2>
+		<span class="cover">
+			<h2 class="shout shrink" id="questions">
+				?
+			</h2>
+		</span>
+		<style>
+			#questions {
+				/*margin-top: 50px;*/
+				font-size: 150px;
+			}
+		</style>
+	</section>
+	<section class="slide">
+		<h2 class="shout" id="thanks">
+			Thank you for your attention!
+		</h2>
+	</section>
 	<div class="progress"></div>
 	<script src="node_modules/shower-core/shower.min.js"></script>
-	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
-	<!-- Photos by John Carey, fiftyfootshadows.net -->
 </body>
 </html>
