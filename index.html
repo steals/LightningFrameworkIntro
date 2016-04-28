@@ -1,183 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Shower Presentation Engine</title>
+	<title>Lightning Components</title>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
+
+	<!--
+		To apply styles to the certain slides
+		set slide ID to get needed elements
+		-->
+	<style>
+		#cover h2 {
+			margin:20px 0 0;
+			color:#FFF;
+			text-align:center;
+			font-size:70px;
+		}
+		.footer {
+			color: #fff;
+			text-align: right;
+			margin-top: 275px;
+		}
+		.footer p {
+			font-size: 32px;
+			line-height: 32px;
+			margin: 0;
+		}
+		.slide .shout {
+			font-size: 75px;
+		}
+		.slide .double {
+			font-size: 20px;
+			line-height: 2;
+		}
+		.hidden {
+			visibility: hidden;
+		}
+		.slide pre code {
+			font-size: 20px;
+			line-height: 1.5;
+		}
+	</style>
 </head>
 <body class="shower list">
 	<header class="caption">
-		<h1>Shower Presentation Engine</h1>
-		<p>Yours Truly, Famous Inc.</p>
+		<h1>Lightning Components Intro / Best Practices</h1>
+		<p>Eugene Rusalev</p>
 	</header>
-	<section class="slide" id="cover">
-		<h2>Shower Presentation Engine</h2>
-		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
-		<img src="pictures/cover.jpg" alt="" class="cover">
-		<!--
-			To apply styles to the certain slides
-			set slide ID to get needed elements
-			-->
-		<style>
-			#cover h2 {
-				margin:30px 0 0;
-				color:#FFF;
-				text-align:center;
-				font-size:70px;
-				}
-			#cover p {
-				margin:10px 0 0;
-				text-align:center;
-				color:#FFF;
-				font-style:italic;
-				font-size:20px;
-				}
-				#cover p a {
-					color:#FFF;
-					}
-		</style>
+	<section class="slide grid" id="cover">
+		<h2>Lightning Components Intro / Best Practices</h2>
+
+		<img src="pictures/cover.jpg" alt="" class="cover height">
+		<div class="footer">
+			<p>Eugene Rusalev</p>
+			<p>Parx</p>
+		</div>
 	</section>
 	<section class="slide">
-		<h2>Shower key features</h2>
-		<ol>
-			<li>Built on HTML, CSS and vanilla JavaScript</li>
-			<li>Works in all modern browsers</li>
-			<li>Themes are separated from engine</li>
-			<li>Modular and extensible</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
-		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+		<h2>So many Lightnings...</h2>
+		<ul>
+			<li>Lightning Framework</li>
+			<li>Lightning Design System</li>
+			<li>Lightning Experience</li>
+			<li>Sales Cloud Lightning</li>
+			<li>App Cloud Lightning</li>
+			<li>Lightning ...</li>
+		</ul>
 	</section>
 	<section class="slide">
-		<h2>Plain text on your slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+		<h2>Lightning Framework</h2>
+		<p class="shout grow lc">Lightning Components</p>
 	</section>
 	<section class="slide">
-		<h2>Two columns if you like</h2>
-		<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+		<h2>Lightning Components vs Visualforce</h2>
+		<ul>
+			<li>Lightning Framework is Component-based framework</li>
+			<li>Lightning Framework is Event driven framework</li>
+			<li>Lightning Framework is Async framework</li>
+			<li>Lightning Framework leverages a stateful client (using JavaScript) and a stateless server (using Apex)</li>
+		</ul>
 	</section>
 	<section class="slide">
-		<h2>All kind of lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
+		<h2>Lightning Components vs Visualforce</h2>
+		<ul class="double">
+			<li>Enables highly interactive and immersive user experiences</li>
+			<li>Javascript based i.e. we can use all power of Web APis</li>
+			<li>Easy to reuse components</li>
+			<li>One approach for mobile and desktop</li>
+			<li>No Annoying Visualforce Limits ( ViewState, Collection Size )</li>
+			<li>Can be included into Visualforce :)</li>
+			<!-- Visualforce -->
+			<li>Tried and true model</li>
+			<li>Has built-in metadata integration</li>
+			<li>Has built-in OLS / FLS security checks</li>
+			<li>Works good as a container for Angular/React/... apps</li>
+			<li>Can be used for Email Templates</li>
+			<li class="hidden"></li>
+			<li class="hidden"></li>
+		</ul>
 	</section>
 	<section class="slide">
-		<h2>Serious citations</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
+		<h2>Lightning Components vs Visualforce</h2>
+		<ul class="double">
+			<li>Actively developing</li>
+			<li>Has annoying bugs</li>
+			<li>Difficult to debug</li>
+			<li>Does not have OLS / FLS security checks</li>
+			<li>Slow rendering on huge pages</li>
+			<li class="hidden"></li>
+			<!-- Visualforce -->
+			<li>Designed ~15 years ago</li>
+			<li>Designed for desktop</li>
+			<li>Serverside generation of HTML markup</li>
+			<li>Mostly serverside logic</li>
+			<li>Higher latency</li>
+			<li>Has Limits</li>
+		</ul>
 	</section>
 	<section class="slide">
-		<h2>Code samples</h2>
+		<h2>How to build Lightning Components</h2>
+		<p class="shout grow">HTML, CSS, Javascript</p>
+
+	</section>
+	<section class="slide">
+		<h2>Aura Attributes</h2>
 		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
+			<code>&lt;aura:component controller="SObjectService"&gt;
+    &lt;aura:attribute name="id" type="String" /&gt;
+    &lt;aura:attribute name="objectName" type="String" /&gt;
+&nbsp;
+    &lt;aura:handler name="init" value="{!this}" action="{!c.init}" /&gt;
+    &lt;aura:handler name="change" value="{!v.field}" action="{!c.init}" /&gt;
+&nbsp;
+    &lt;ltng:require styles="/resource/SLDS100/assets/styles/<br/>salesforce-lightning-design-system.min.css" /&gt;
+&nbsp;
+&lt;/aura:component&gt;</code>
 		</pre>
 	</section>
+
 	<section class="slide">
-		<h2>Even tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
+		<h2>Aura Attributes</h2>
+		<pre>
+			<code>&lt;aura:component controller="SObjectService"&gt;
+			    &lt;!-- Attributes --&gt;
+			    &lt;div class="slds-col slds-form-element"&gt;
+			        &lt;aura:if isTrue="{!v.label != null &amp;&amp; v.label != ''}"&gt;
+			            &lt;label class="slds-form-element__label" for="{!v.id}"&gt;{!v.label}&lt;/label&gt;
+			        &lt;/aura:if&gt;
+			        &lt;div class="slds-form-element__control"&gt;
+			            &lt;div class="slds-select_container"&gt;
+			                &lt;select id="{!v.id}" class="slds-select" onchange="{!c.updateValue}"&gt;
+			                    &lt;aura:iteration items="{!v.options}" var="option"&gt;
+			                        &lt;option value="{!option.value}" selected="{!v.value == option.value}"&gt;{!option.label}&lt;/option&gt;
+			                    &lt;/aura:iteration&gt;
+			                &lt;/select&gt;
+			            &lt;/div&gt;
+			        &lt;/div&gt;
+			    &lt;/div&gt;
+			&lt;/aura:component&gt;</code>
+		</pre>
+
+
 	</section>
-	<section class="slide" id="picture">
-		<h2>Pictures</h2>
-		<img src="pictures/picture.jpg" alt="" class="cover">
-		<style>
-			#picture h2 {
-				color:#FFF;
-				}
-		</style>
-	</section>
-	<section class="slide">
-		<h2 class="shout shrink">You can even shout this way</h2>
-	</section>
-	<section class="slide">
-		<h2>Inner navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
-		</ol>
-	</section>
-	<section class="slide grid">
-		<h2>All nicely aligned to grid</h2>
-	</section>
-	<section class="slide" id="see-more">
-		<h2 class="shout">
-			<img src="pictures/logo.svg" alt="Shower logo">
-			<a href="https://github.com/shower/shower">See more on GitHub</a>
-		</h2>
-		<style>
-			#see-more h2 {
-				font-size:100px
-				}
-			#see-more img {
-				width:0.72em;
-				height:0.72em;
-				}
-		</style>
-	</section>
-	<p class="badge">
-		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
-	</p>
-	<!--
-		To hide progress bar from entire presentation
-		just remove “progress” element.
-		-->
+
 	<div class="progress"></div>
 	<script src="node_modules/shower-core/shower.min.js"></script>
 	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
